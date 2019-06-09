@@ -12,7 +12,7 @@ def create_child_processes():
     for site in sites:
         proc = subprocess.Popen(['ping', site])
 
-        print('[+] Created child process with pid', proc.pid)
+        print('[+] Created a child process with pid', proc.pid)
 
 def kill_child_processes():
     cur_proc = psutil.Process(os.getpid())
@@ -20,14 +20,18 @@ def kill_child_processes():
     for child_proc in cur_proc.children(): 
         child_proc.kill()
 
-        print('[-] Killed process with pid', child_proc.pid)
+        print('[-] Killed the process with pid', child_proc.pid)
 
 
 if __name__ == '__main__':
     create_child_processes()
+
     print()
+
     time.sleep(15)
+
     print()
+
     kill_child_processes()
 
 
