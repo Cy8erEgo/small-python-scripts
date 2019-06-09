@@ -20,7 +20,7 @@ def kill_child_processes():
     for child_proc in cur_proc.children(): 
         child_proc.kill()
 
-        print('[-] Killed procecc with pid', child_proc.pid)
+        print('[-] Killed process with pid', child_proc.pid)
 
 
 if __name__ == '__main__':
